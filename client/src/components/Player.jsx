@@ -3,30 +3,52 @@ import { CiPause1 } from "react-icons/ci";
 import { MdSkipNext } from "react-icons/md";
 import { MdSkipPrevious } from "react-icons/md";
 import { ImLoop } from "react-icons/im";
+import song from "../assets/download.mp3"
+import { useEffect, useRef } from "react";
+import { useState } from "react";
 
 
 function Player() {
+    const [isPlaying, setIsPlaying] = useState(false);
+    const [currentTime, setCurrentTime] = useState(0);
+    const [duration, setDuration] = useState(0);
+   const audioref=useRef(null)
+
+   const playpause=()=>{
+    if(isPlaying){
+       audioref.current.pause();
+    }
+    else{
+        audioref.current.play();
+    }
+    setIsPlaying(!isPlaying);
+   }
+
+   const settime=()=>{
+    
+   }
+
     return (<>
-        <div className=" text-white fixed bottom-0 flex items-center justify-evenly bg-slate-700 w-full p-4 rounded-lg">
+        <div className=" text-white  bottom-0 w-3/4 fixed right-0 flex items-center justify-evenly bg-slate-900  p-2 rounded-lg">
 
             {/* first part */}
             <div className=" flex items-center gap-3">
                 <img src="" alt="c" />
-                <p className=" font-semibold">Subah Hone na deh</p>
+                <p className=" font-bold text-2xl">Subah Hone na deh</p>
             </div>
 
             {/* middle part */}
-            <div>
+            <div className=" flex flex-col gap-2 items-center">
 
-                <div className=" flex font-bold items-center gap-2">
-                    <IoIosShuffle className=" text-2xl  cursor-pointer" />
-                    <MdSkipPrevious className=" text-2xl  cursor-pointer" />
-                    <CiPause1 className=" text-2xl cursor-pointer" />
-                    <MdSkipNext className=" text-2xl cursor-pointer" />
-                    <ImLoop className=" text-xl  cursor-pointer" />
+                <div className=" flex font-bold text-4xl items-center gap-2">
+                    <IoIosShuffle className="  cursor-pointer" />
+                    <MdSkipPrevious className="cursor-pointer" />
+                    <CiPause1 onClick={playpause} className=" cursor-pointer" />
+                    <MdSkipNext className="cursor-pointer" />
+                    <ImLoop className="  cursor-pointer" />
                 </div>
 
-                <div className=" flex">
+                <div className=" flex gap-4 items-center">
                     <p>1:00</p>
 
                     <p>2:23</p>
@@ -40,7 +62,7 @@ function Player() {
 
 
             </div>
-
+            <audio ref={audioref} src={song} preload="metadata" />
         </div>
     </>)
 }
