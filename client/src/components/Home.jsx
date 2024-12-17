@@ -86,15 +86,15 @@ function Home(){
             desc:"Your weekly update of the most played tracks",
             bgColor:"#744210"
         }
-    ]
+    ] 
 
 return(<>
 <div className=" bg-gray-900 w-[99vw] flex  flex-col lg:w-[73vw] absolute right-0 lg:m-4 rounded-2xl">
     {/* three categories */}
    <div className=' flex m-3 gap-8 text-sm font-bold text-white '>
-    <span className=' bg-black p-3 rounded-full hover:scale-105 hover:bg-gray-400'>All</span>
-    <span className=' bg-black p-3 rounded-full hover:scale-105 hover:bg-gray-400'>Music</span>
-    <span className=' bg-black p-3 rounded-full hover:scale-105 hover:bg-gray-400'>Featured</span>
+    <span className=' bg-black p-3 rounded-full hover:scale-105 hover:bg-gray-400 cursor-pointer transform transition duration-300'>All</span>
+    <span className=' bg-black p-3 rounded-full hover:scale-105 hover:bg-gray-400 cursor-pointer transform transition duration-300'>Music</span>
+    <span className=' bg-black p-3 rounded-full hover:scale-105 hover:bg-gray-400 cursor-pointer transform transition duration-300'>Featured</span>
 
    </div>
 
@@ -103,9 +103,9 @@ return(<>
     <span className='m-3 font-bold text-2xl text-gray-200'>Albums</span>
 
     {/* display */}
-    <div className=' flex text-white gap-4 m-4 overflow-y-hidden overflow-x-scroll'>
+    <div className=' flex text-white gap-4 m-4 overflow-x-scroll'>
     {albumsData.map((i)=>(
-       <div style={{background:i.bgColor}} className='min-w-36 p-2 rounded-lg  gap-1 flex flex-col'>
+       <div style={{background:i.bgColor}} className='min-w-36 p-2 rounded-lg cursor-pointer gap-1 flex flex-col'>
         <img className='text-center' src={logo} alt="" />
         <span className=' font-bold text-center text-md whitespace-nowrap '>{i.name}</span>
         <span className=' text-center'>{i.desc.slice(0,19)}</span>
@@ -117,7 +117,7 @@ return(<>
 
     <div className=' flex text-white gap-4 m-4 overflow-y-hidden overflow-x-scroll'>
     {albumsData.map((i)=>(
-       <div style={{background:i.bgColor}} className='min-w-36 p-2 rounded-lg  gap-1 flex flex-col'>
+       <div style={{background:i.bgColor}} className='min-w-36 p-2 rounded-lg cursor-pointer gap-1 flex flex-col'>
         <img className='text-center' src={logo} alt="" />
         <span className=' font-bold text-center text-md whitespace-nowrap '>{i.name}</span>
         <span className=' text-center'>{i.desc.slice(0,19)}</span>

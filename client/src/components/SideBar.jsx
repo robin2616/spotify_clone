@@ -22,7 +22,7 @@ function Sidebar() {
         </div>
 
 
-         {isvisible && <div className="w-full sm:w-[100vw] flex z-10 absolute lg:w-1/4 p-3 bg-gray-900 gap-2   flex-col text-gray-100 font-semibold text-sm rounded-md lg:flex">
+         {isvisible && <div className="w-full sm:w-[100vw] flex z-10 absolute  lg:w-1/4 p-3 bg-gray-900 gap-2  flex-col text-gray-100 font-semibold text-sm rounded-md lg:flex">
 
                 <div className="flex gap-4 items-center bg-gray-800 rounded-md p-3 cursor-pointer hover:bg-gray-700 transform transition duration-300 hover:scale-105">
                     <IoHome />

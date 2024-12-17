@@ -10,7 +10,7 @@ function App() {
   return (
     <>
     
-      <div className=" bg-black w-screen max-h-screen">
+      <div className="bg-black text-white w-full h-[150vh]">
         
     
       <Header/>
