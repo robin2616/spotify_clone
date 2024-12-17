@@ -100,34 +100,32 @@ return(<>
 
    {/* heading */}
    <div className=' flex flex-col'>
-    <span className='m-3 font-bold text-2xl text-red-600'>Albums</span>
+    <span className='m-3 font-bold text-2xl text-gray-200'>Albums</span>
 
     {/* display */}
     <div className=' flex text-white gap-4 m-4 overflow-y-hidden overflow-x-scroll'>
     {albumsData.map((i)=>(
-       <div style={{background:i.bgColor}} className='min-w-36 p-2 rounded-sm gap-2 flex flex-col'>
-        <img src={logo} alt="" />
-        <span className=' font-extrabold text-sm whitespace-nowrap  text-justify'>{i.name}</span>
-        <span>{i.desc}</span>
+       <div style={{background:i.bgColor}} className='min-w-36 p-2 rounded-lg  gap-1 flex flex-col'>
+        <img className='text-center' src={logo} alt="" />
+        <span className=' font-bold text-center text-md whitespace-nowrap '>{i.name}</span>
+        <span className=' text-center'>{i.desc.slice(0,19)}</span>
        </div>
     ))}
     </div>
 
-{/* <div className=' flex gap-14 text-md m-4 text-white  overflow-y-hidden overflow-x-scroll'>
+    <span className='m-3 font-bold text-2xl text-gray-200'>Albums</span>
+
+    <div className=' flex text-white gap-4 m-4 overflow-y-hidden overflow-x-scroll'>
     {albumsData.map((i)=>(
-        <div style={{ backgroundColor: i.bgColor }} className='rounded-lg w-72 flex p-3  justify-center cursor-pointer items-center flex-col transform transition duration-300 hover:scale-110 hover:border-2 hover:border-white '>
-          <img src={i.image}  alt="" />
-          <div  className=' font-extrabold text-sm whitespace-nowrap  text-justify'>{i.name}</div>
-          <div>{i.desc.slice(0,19)}</div>
+       <div style={{background:i.bgColor}} className='min-w-36 p-2 rounded-lg  gap-1 flex flex-col'>
+        <img className='text-center' src={logo} alt="" />
+        <span className=' font-bold text-center text-md whitespace-nowrap '>{i.name}</span>
+        <span className=' text-center'>{i.desc.slice(0,19)}</span>
+       </div>
+    ))}
+    </div>
 
 
-        </div>
-        
-    ))
-    
-
-    }
-    </div> */}
    
    
     

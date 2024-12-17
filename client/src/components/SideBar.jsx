@@ -12,16 +12,17 @@ function Sidebar() {
     return (
         <>
         {/* for responsive */}
-        <div className=" bg-yellow-200 fixed left-0 lg:hidden cursor-pointer"
+        <div className=" bg-yellow-200left-0 lg:hidden cursor-pointer"
         onClick={()=>{setvisible(!isvisible)}}>
-            <div className=" p-2 text-3xl flex z-0">
-            <TiThMenu/>
+            <div className=" p-2 text-3xl gap-6  flex items-center justify-start bg-gray-700">
+            <TiThMenu className=" text-white"/>
+            <span className=" text-white text-xl font-semibold ">Create your own playlist</span>
             </div>
             
         </div>
 
 
-         {isvisible && <div className="w-full sm:w-[100vw] flex absolute z-10 lg:w-1/4 p-3 bg-gray-900 gap-2  flex-col text-white font-semibold text-sm rounded-md lg:flex">
+         {isvisible && <div className="w-full sm:w-[100vw] flex z-10 absolute lg:w-1/4 p-3 bg-gray-900 gap-2   flex-col text-gray-100 font-semibold text-sm rounded-md lg:flex">
 
                 <div className="flex gap-4 items-center bg-gray-800 rounded-md p-3 cursor-pointer hover:bg-gray-700 transform transition duration-300 hover:scale-105">
                     <IoHome />

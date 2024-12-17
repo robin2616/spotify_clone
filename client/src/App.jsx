@@ -9,7 +9,10 @@ import {BrowserRouter, Routes,Route} from "react-router"
 function App() {
   return (
     <>
+    
       <div className=" bg-black w-screen max-h-screen">
+        
+    
       <Header/>
       <Sidebar/>
       {/* <Player/> */}
