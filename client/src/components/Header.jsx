@@ -25,7 +25,7 @@ function Header() {
             <div className=" flex items-center gap-3">
 
 
-                <input type="text" className=" p-1 bg-gray-600 hover:scale-105 transform transition duration-300 rounded-lg font-bold focus:outline-none px-2 text-lg text-white shadow-green-500 drop-shadow-md" placeholder=" Search ">
+                <input type="text" className=" p-1 bg-gray-700  rounded-lg font-bold focus:outline-none px-2 text-lg text-white" placeholder=" Search ">
                 </input>
 
             </div>
@@ -36,7 +36,7 @@ function Header() {
 
             {/* third */}
             <div className="  items-center hidden lg:flex  gap-4 text-xl font-semibold">
-                <span className=" cursor-pointer transform transition duration-300 hover:scale-110">Install App</span>
+                <span className=" cursor-pointer transform transition duration-300 hover:scale-110" onClick={()=>{window.open("https://open.spotify.com/","_self")}}>Install App</span>
                 <FaBell className="text-white bg-gray-700 p-1 transform transition duration-300 text-2xl rounded-full cursor-pointer hover:scale-125" />
                 <FaRegUserCircle className=" text-2xl cursor-pointer transform transition duration-300 hover:scale-125" />
 
